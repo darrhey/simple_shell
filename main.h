@@ -21,9 +21,10 @@ extern char **environ;
  */
 typedef struct builtins
 {
-	char *arg;
-	void (*builtin)(char **args, char *line, char **env);
-} builtins_t;
+char *arg;
+void (*builtin)(char **args, char *line, char **env);
+}
+builtins_t;
 void shell(int ac, char **av, char **env);
 char *_getline(void);
 char **split_line(char *line);
@@ -43,4 +44,5 @@ char *read_dir(char *er, struct dirent *s, char *fi, int l, char *p, char *t);
 char *_getenv(char *env);
 char *_strstr(char *haystack, char *needle);
 int _strlen(char *s);
+
 #endif /*MAIN*/
